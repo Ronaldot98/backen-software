@@ -25,6 +25,11 @@ const EsquemaTb_direorigen={
 class Direorigen extends Model{
   static associate(models){
 
+    this.hasMany(models.Remitente,{
+      as: 'remitente',
+     foreignKey: 'direorigenId'
+    });
+
   }
 
   static config(sequelize){

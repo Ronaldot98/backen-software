@@ -40,6 +40,11 @@ const EsquemaTb_clientes={
 class Cliente extends Model{
   static associate(models){
 
+    this.hasMany(models.Remitente,{
+      as: 'remitente',
+     foreignKey: 'clienteId'
+    });
+
   }
 
   static config(sequelize){

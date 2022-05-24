@@ -35,6 +35,10 @@ const EsquemaTb_paquetes={
 class Paquete extends Model{
   static associate(models){
 
+    this.hasMany(models.Envio,{
+      as: 'envio',
+     foreignKey: 'paqueteId'
+    });
   }
 
   static config(sequelize){

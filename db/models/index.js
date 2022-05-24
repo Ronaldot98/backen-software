@@ -10,6 +10,10 @@ const { Destinario, EsquemaTb_destinarios } = require('./destinario.model');
 const { Destino, EsquemaTb_destinos } = require('./dire_destino.model');
 const { Repsector, EsquemaTb_repsector } = require('./repartidor_sector.model');
 const { Direorigen, EsquemaTb_direorigen } = require('./direccion_origen.model');
+const { Estado, EsquemaTb_estado } = require('./estado.model');
+const { Remitente, EsquemaTb_remitente } = require('./remitentes.model');
+const { Envio, EsquemaTb_envio } = require('./envio.model');
+
 
 
 
@@ -25,6 +29,9 @@ function setupModels(sequelize) {
   Destino.init(EsquemaTb_destinos, Destino.config(sequelize));
   Repsector.init(EsquemaTb_repsector, Repsector.config(sequelize))
   Direorigen.init(EsquemaTb_direorigen, Direorigen.config(sequelize))
+  Estado.init(EsquemaTb_estado, Estado.config(sequelize))
+  Remitente.init(EsquemaTb_remitente, Remitente.config(sequelize))
+  Envio.init(EsquemaTb_envio, Envio.config(sequelize))
 
 
   //si los modelos tiene una asociación ejecutar el metodo
@@ -32,6 +39,15 @@ function setupModels(sequelize) {
   Direccion.associate(sequelize.models);
   Destino.associate(sequelize.models);
   Repartidor.associate(sequelize.models);
+  Cliente.associate(sequelize.models);
+  Direorigen.associate(sequelize.models);
+  Paquete.associate(sequelize.models);
+  Remitente.associate(sequelize.models);
+  Destinario.associate(sequelize.models);
+
+
+
+
 
 }
 

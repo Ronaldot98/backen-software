@@ -45,6 +45,11 @@ const EsquemaTb_destinarios = {
 class Destinario extends Model{
   static associate(models){
 
+    this.hasMany(models.Envio,{
+      as: 'envio',
+     foreignKey: 'destinarioId'
+    });
+  }
   }
 
   static config(sequelize){
