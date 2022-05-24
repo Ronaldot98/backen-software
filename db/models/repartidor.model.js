@@ -45,6 +45,11 @@ const EsquemaTb_repartidores={
 class Repartidor extends Model{
   static associate(models){
 
+    this.hasMany(models.Repsector,{
+      as: 'rep_sec',
+     foreignKey: 'repartidorId'
+    });
+
   }
 
   static config(sequelize){

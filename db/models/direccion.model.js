@@ -34,10 +34,17 @@ detalles:{
 
 class Direccion extends Model{
   static associate(models){
+
     this.hasMany(models.Destino,{
       as: 'destino',
-      foreignKey: 'direId'
-    })
+     foreignKey: 'direId'
+    });
+
+    this.hasMany(models.Repsector,{
+      as: 'rep_sec',
+      foreignKey: 'direccionId'
+    });
+
   }
 
   static config(sequelize){
