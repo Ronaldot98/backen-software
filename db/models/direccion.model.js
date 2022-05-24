@@ -45,6 +45,11 @@ class Direccion extends Model{
       foreignKey: 'direccionId'
     });
 
+    this.hasMany(models.Direorigen,{
+      as: 'dire_origen',
+      foreignKey: 'direcId'
+    });
+
   }
 
   static config(sequelize){

@@ -9,6 +9,7 @@ const { Direccion, EsquemaTb_direcciones } = require('./direccion.model');
 const { Destinario, EsquemaTb_destinarios } = require('./destinario.model');
 const { Destino, EsquemaTb_destinos } = require('./dire_destino.model');
 const { Repsector, EsquemaTb_repsector } = require('./repartidor_sector.model');
+const { Direorigen, EsquemaTb_direorigen } = require('./direccion_origen.model');
 
 
 
@@ -23,6 +24,7 @@ function setupModels(sequelize) {
   Destinario.init(EsquemaTb_destinarios, Destinario.config(sequelize));
   Destino.init(EsquemaTb_destinos, Destino.config(sequelize));
   Repsector.init(EsquemaTb_repsector, Repsector.config(sequelize))
+  Direorigen.init(EsquemaTb_direorigen, Direorigen.config(sequelize))
 
 
   //si los modelos tiene una asociación ejecutar el metodo
