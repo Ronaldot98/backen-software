@@ -13,6 +13,7 @@ const { Direorigen, EsquemaTb_direorigen } = require('./direccion_origen.model')
 const { Estado, EsquemaTb_estado } = require('./estado.model');
 const { Remitente, EsquemaTb_remitente } = require('./remitentes.model');
 const { Envio, EsquemaTb_envio } = require('./envio.model');
+const { Bitacora, EsquemaTb_bitacora } = require('./bitacoras.model');
 
 
 
@@ -32,6 +33,7 @@ function setupModels(sequelize) {
   Estado.init(EsquemaTb_estado, Estado.config(sequelize))
   Remitente.init(EsquemaTb_remitente, Remitente.config(sequelize))
   Envio.init(EsquemaTb_envio, Envio.config(sequelize))
+  Bitacora.init(EsquemaTb_bitacora, Bitacora.config(sequelize))
 
 
   //si los modelos tiene una asociación ejecutar el metodo
@@ -44,6 +46,8 @@ function setupModels(sequelize) {
   Paquete.associate(sequelize.models);
   Remitente.associate(sequelize.models);
   Destinario.associate(sequelize.models);
+  Envio.associate(sequelize.models);
+  Estado.associate(sequelize.models);
 
 
 

@@ -61,7 +61,10 @@ const EsquemaTb_envio={
 class Envio extends Model{
   static associate(models){
 
-
+    this.hasMany(models.Bitacora,{
+      as: 'bitacora',
+     foreignKey: 'envioId'
+    });
 
   }
 

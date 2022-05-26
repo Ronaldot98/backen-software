@@ -27,6 +27,11 @@ const EsquemaTb_estado={
 class Estado extends Model{
   static associate(models){
 
+    this.hasMany(models.Bitacora,{
+      as: 'bitacora',
+     foreignKey: 'estadoId'
+    });
+
 
   }
 

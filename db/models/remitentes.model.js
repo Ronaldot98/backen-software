@@ -37,6 +37,7 @@ const EsquemaTb_remitente= {
 }
 
 class Remitente extends Model{
+
   static associate(models){
 
     this.hasMany(models.Envio,{
@@ -45,7 +46,7 @@ class Remitente extends Model{
     });
   }
 
-  }
+
 
   static config(sequelize){
     return {
