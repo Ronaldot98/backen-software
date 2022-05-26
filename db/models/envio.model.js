@@ -66,6 +66,11 @@ class Envio extends Model{
      foreignKey: 'envioId'
     });
 
+    this.hasMany(models.Pagos,{
+      as: 'pagos',
+     foreignKey: 'enviId'
+    });
+
   }
 
   static config(sequelize){
