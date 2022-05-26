@@ -53,10 +53,6 @@ function setupModels(sequelize) {
   Envio.associate(sequelize.models);
   Estado.associate(sequelize.models);
 
-
-
-
-
 }
 
 module.exports = setupModels;
