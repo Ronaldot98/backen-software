@@ -14,6 +14,8 @@ const { Estado, EsquemaTb_estado } = require('./estado.model');
 const { Remitente, EsquemaTb_remitente } = require('./remitentes.model');
 const { Envio, EsquemaTb_envio } = require('./envio.model');
 const { Bitacora, EsquemaTb_bitacora } = require('./bitacoras.model');
+const { Pagos, EsquemaTb_pagos } = require('./pagos.model');
+const { Enviorepartidor, EsquemaTb_enviorepartidores } = require('./envio_repartidor.model');
 
 
 
@@ -34,6 +36,8 @@ function setupModels(sequelize) {
   Remitente.init(EsquemaTb_remitente, Remitente.config(sequelize))
   Envio.init(EsquemaTb_envio, Envio.config(sequelize))
   Bitacora.init(EsquemaTb_bitacora, Bitacora.config(sequelize))
+  Pagos.init(EsquemaTb_pagos, Pagos.config(sequelize))
+  Enviorepartidor.init(EsquemaTb_enviorepartidores, Enviorepartidor.config(sequelize))
 
 
   //si los modelos tiene una asociación ejecutar el metodo

@@ -71,6 +71,11 @@ class Envio extends Model{
      foreignKey: 'enviId'
     });
 
+    this.hasMany(models.Enviorepartidor,{
+      as: 'enviorepartidor',
+     foreignKey: 'enviosId'
+    });
+
   }
 
   static config(sequelize){

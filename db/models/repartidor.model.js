@@ -50,6 +50,12 @@ class Repartidor extends Model{
      foreignKey: 'repartidorId'
     });
 
+    this.hasMany(models.Enviorepartidor,{
+      as: 'enviorepartidor',
+     foreignKey: 'repartId'
+    });
+
+
   }
 
   static config(sequelize){
