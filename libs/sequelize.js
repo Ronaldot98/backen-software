@@ -27,5 +27,5 @@ setupModels(sequelize);
 //se hace una sincronizacion recoge los modelos y crea esa estructura
 //se desctiva para no generar tablas automaticamente
 //Se trabajara con migraciones para ver los cambios que se realiza
-//sequelize.sync();
+sequelize.sync();
 module.exports = sequelize;
