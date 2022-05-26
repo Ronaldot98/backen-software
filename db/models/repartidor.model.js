@@ -20,14 +20,14 @@ const EsquemaTb_repartidores={
     allowNull: false,
     type: DataTypes.STRING,
   },
+  telefono:{
+    allowNull: false,
+    type: DataTypes.STRING
+  },
   correo:{
     allowNull: false,
     type: DataTypes.STRING,
     unique: true
-  },
-  telefono:{
-    allowNull: false,
-    type: DataTypes.STRING
   },
   password: {
     allowNull: false,

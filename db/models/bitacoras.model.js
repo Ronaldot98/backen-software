@@ -13,7 +13,7 @@ const EsquemaTb_bitacora={
     primaryKey: true,
     type: DataTypes.INTEGER
   },
-  date_update:{
+  fecha_actualizacion:{
     allowNull: false,
     type: DataTypes.STRING,
 
